@@ -1,0 +1,20 @@
+body {
+  font-family: "Montserrat";
+}
+
+button {
+  padding: 18px 30px;
+  border: none;
+  font-family: "Montserrat";
+  cursor: pointer;
+  font-size: 16px;
+}
+button.primary {
+  background-color: #60a5fa;
+  color: white;
+}
+button.primary:hover {
+  background-color: #167bf8;
+}
+
+/*# sourceMappingURL=style.css.map */
