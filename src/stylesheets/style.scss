@@ -1,17 +1,114 @@
+$dark-bg: #111827;
+$text: #f3f4f6;
+$dark-nav: #6b21a8;
+$dark-secondary-nav: lighten($dark-nav, 6%);
+$primary: #60a5fa;
+
 body {
 	font-family: "Montserrat";
+	color: white;
+	background: $dark-bg;
+	margin: 0;
+	font-size: x-large;
+}
+* {
+	margin: 0;
 }
 button {
-	padding: 18px 30px;
+	margin-left: 5px;
+	margin-right: 5px;
+	padding: 15px 32px;
 	border: none;
 	font-family: "Montserrat";
 	cursor: pointer;
 	font-size: 16px;
+	transition: background-color 0.3s ease;
+	font-size: x-large;
 	&.primary {
-		background-color: #60a5fa;
+		background-color: $primary;
 		color: white;
 		&:hover {
-			background-color: darken(#60a5fa, 15%);
+			background-color: darken($primary, 15%);
 		}
 	}
+	&.rounded {
+		border-radius: 5px;
+	}
+}
+
+.nav {
+	background-color: $dark-nav;
+	overflow: hidden;
+
+	.brand {
+		font-weight: bold;
+	}
+	i {
+		margin-right: 2.5px;
+		font-size: x-large;
+	}
+
+	a,
+	span {
+		float: left;
+		color: #f2f2f2;
+		text-align: center;
+		margin-top: 12.5px;
+		margin-bottom: 12.5px;
+		margin-left: 6.25px;
+		margin-right: 6.25px;
+		padding: 14px;
+		text-decoration: none;
+		font-size: x-large;
+		transition: background-color 0.2s ease, color 0.2s ease;
+		border-radius: 5px;
+	}
+	.right {
+		float: right !important;
+	}
+	a:hover {
+		background-color: lighten($color: $dark-nav, $amount: 5%);
+	}
+}
+
+.secondary-nav {
+	background-color: $dark-secondary-nav;
+	overflow: hidden;
+	margin-bottom: 15px;
+	i {
+		margin-right: 2.5px;
+		font-size: x-large;
+	}
+
+	a {
+		float: left;
+		color: #f2f2f2;
+		text-align: center;
+		margin-top: 12.5px;
+		margin-bottom: 12.5px;
+		margin-left: 6.25px;
+		margin-right: 6.25px;
+		padding: 10px;
+		text-decoration: none;
+		font-size: x-large;
+		transition: background-color 0.2s ease, color 0.2s ease;
+		border-radius: 5px;
+	}
+
+	a:hover {
+		background-color: lighten($color: $dark-secondary-nav, $amount: 5%);
+	}
+}
+
+.container {
+	max-width: 1200px;
+	margin: auto;
+}
+
+.alert {
+	padding: 16px;
+	width: 100%;
+	text-align: center;
+	background: #15803d;
+	border-radius: 5px;
 }

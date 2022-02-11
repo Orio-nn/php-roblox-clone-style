@@ -1,0 +1,1 @@
+sass -w src/stylesheets/style.scss public/stylesheets/style.css

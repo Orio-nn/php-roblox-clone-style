@@ -1,13 +1,25 @@
 body {
   font-family: "Montserrat";
+  color: white;
+  background: #111827;
+  margin: 0;
+  font-size: x-large;
+}
+
+* {
+  margin: 0;
 }
 
 button {
-  padding: 18px 30px;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 15px 32px;
   border: none;
   font-family: "Montserrat";
   cursor: pointer;
   font-size: 16px;
+  transition: background-color 0.3s ease;
+  font-size: x-large;
 }
 button.primary {
   background-color: #60a5fa;
@@ -15,6 +27,82 @@ button.primary {
 }
 button.primary:hover {
   background-color: #167bf8;
+}
+button.rounded {
+  border-radius: 5px;
+}
+
+.nav {
+  background-color: #6b21a8;
+  overflow: hidden;
+}
+.nav .brand {
+  font-weight: bold;
+}
+.nav i {
+  margin-right: 2.5px;
+  font-size: x-large;
+}
+.nav a,
+.nav span {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  margin-top: 12.5px;
+  margin-bottom: 12.5px;
+  margin-left: 6.25px;
+  margin-right: 6.25px;
+  padding: 14px;
+  text-decoration: none;
+  font-size: x-large;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  border-radius: 5px;
+}
+.nav .right {
+  float: right !important;
+}
+.nav a:hover {
+  background-color: #7925bd;
+}
+
+.secondary-nav {
+  background-color: #7b26c2;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+.secondary-nav i {
+  margin-right: 2.5px;
+  font-size: x-large;
+}
+.secondary-nav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  margin-top: 12.5px;
+  margin-bottom: 12.5px;
+  margin-left: 6.25px;
+  margin-right: 6.25px;
+  padding: 10px;
+  text-decoration: none;
+  font-size: x-large;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  border-radius: 5px;
+}
+.secondary-nav a:hover {
+  background-color: #892cd5;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.alert {
+  padding: 16px;
+  width: 100%;
+  text-align: center;
+  background: #15803d;
+  border-radius: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */
