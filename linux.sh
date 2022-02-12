@@ -1,1 +1,1 @@
-sass -w source/stylesheets/index.scss public/stylesheets/index.css
+sass -w src/stylesheets/style.scss public/stylesheets/style.css
