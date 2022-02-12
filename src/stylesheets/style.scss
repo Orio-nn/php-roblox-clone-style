@@ -1,9 +1,18 @@
 $dark-bg: #111827;
+$dark-footer: lighten($dark-bg, 15%);
 $text: #f3f4f6;
 $dark-nav: #6b21a8;
 $dark-secondary-nav: lighten($dark-nav, 6%);
 $primary: #60a5fa;
 
+$footer-height: 80px;
+html,
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	overflow-x: hidden;
+}
 body {
 	font-family: "Montserrat";
 	color: white;
@@ -11,6 +20,33 @@ body {
 	margin: 0;
 	font-size: x-large;
 }
+footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: $footer-height; /* Height of the footer */
+	background: $dark-footer;
+	padding: 16px;
+	a {
+		color: white;
+		text-decoration: none;
+		transition: font-size 0.2s ease;
+		&:hover {
+			font-size: 28px;
+		}
+	}
+}
+// i fucking hate wrappers but i cant figure out how to keep
+// the fucking footer at the bottom of the page
+.wrapper {
+	min-height: 100%;
+	position: relative;
+}
+
+.content {
+	padding-bottom: $footer-height;
+}
+
 * {
 	margin: 0;
 }
@@ -63,12 +99,12 @@ button {
 		transition: background-color 0.2s ease, color 0.2s ease;
 		border-radius: 5px;
 	}
-	.right {
-		float: right !important;
-	}
 	a:hover {
 		background-color: lighten($color: $dark-nav, $amount: 5%);
 	}
+}
+.right {
+	float: right !important;
 }
 
 .secondary-nav {
