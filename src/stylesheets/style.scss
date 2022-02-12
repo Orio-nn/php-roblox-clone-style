@@ -1,9 +1,15 @@
-$dark-bg: #111827;
-$dark-footer: lighten($dark-bg, 15%);
+// colors
 $text: #f3f4f6;
 $dark-nav: #6b21a8;
+$primary: #2563eb;
+$danger: #dc2626;
+$warning: #ea580c;
+$success: #16a34a;
+$secondary: #4b5563;
+// color modifiers
+$dark-bg: #111827;
+$dark-footer: lighten($dark-bg, 15%);
 $dark-secondary-nav: lighten($dark-nav, 6%);
-$primary: #60a5fa;
 
 $footer-height: 80px;
 html,
@@ -30,9 +36,10 @@ footer {
 	a {
 		color: white;
 		text-decoration: none;
-		transition: font-size 0.2s ease;
+		transition: font-size 0.2s ease, font-weight 0.1s ease;
 		&:hover {
 			font-size: 28px;
+			font-weight: 500;
 		}
 	}
 }
@@ -61,10 +68,31 @@ button {
 	transition: background-color 0.3s ease;
 	font-size: x-large;
 	&.primary {
-		background-color: $primary;
+		background: $primary;
 		color: white;
 		&:hover {
 			background-color: darken($primary, 15%);
+		}
+	}
+	&.danger {
+		background: $danger;
+		color: white;
+		&:hover {
+			background-color: darken($danger, 15%);
+		}
+	}
+	&.warning {
+		background: $warning;
+		color: white;
+		&:hover {
+			background-color: darken($warning, 15%);
+		}
+	}
+	&.secondary {
+		background: $secondary;
+		color: white;
+		&:hover {
+			background-color: darken($secondary, 15%);
 		}
 	}
 	&.rounded {
@@ -75,6 +103,7 @@ button {
 .nav {
 	background-color: $dark-nav;
 	overflow: hidden;
+	box-shadow: 12px 12px 8px 0px #888888;
 
 	.brand {
 		font-weight: bold;
@@ -145,6 +174,20 @@ button {
 	padding: 16px;
 	width: 100%;
 	text-align: center;
-	background: #15803d;
 	border-radius: 5px;
+	&.primary {
+		background: $primary;
+	}
+	&.danger {
+		background: $danger;
+	}
+	&.warning {
+		background: $warning;
+	}
+	&.secondary {
+		background: $secondary;
+	}
+	&.success {
+		background: $success;
+	}
 }
