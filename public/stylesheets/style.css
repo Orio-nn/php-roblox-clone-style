@@ -24,7 +24,7 @@ footer {
   padding: 16px;
 }
 footer a {
-  color: white;
+  color: inherit;
   text-decoration: none;
   transition: font-size 0.2s ease, font-weight 0.1s ease;
 }
@@ -60,33 +60,33 @@ button.primary {
   background: #2563eb;
   color: white;
 }
-button.primary:hover {
+button.primary:hover, button.primary:focus {
   background-color: #1043b3;
-  box-shadow: inset 0px 0px 6px 2px #0f3b9e;
+  box-shadow: inset 0px 0px 6px 2px #0d3690;
 }
 button.danger {
   background: #dc2626;
   color: white;
 }
-button.danger:hover {
+button.danger:hover, button.danger:focus {
   background-color: #9c1919;
-  box-shadow: inset 0px 0px 6px 2px #891616;
+  box-shadow: inset 0px 0px 6px 2px #7b1414;
 }
 button.warning {
   background: #ea580c;
   color: white;
 }
-button.warning:hover {
+button.warning:hover, button.warning:focus {
   background-color: #a13d08;
-  box-shadow: inset 0px 0px 6px 2px #8b3407;
+  box-shadow: inset 0px 0px 6px 2px #7d2f06;
 }
 button.secondary {
   background: #4b5563;
   color: white;
 }
-button.secondary:hover {
+button.secondary:hover, button.secondary:focus {
   background-color: #2a3037;
-  box-shadow: inset 0px 0px 6px 2px #20242a;
+  box-shadow: inset 0px 0px 6px 2px #1a1d22;
 }
 button.rounded {
   border-radius: 5px;
@@ -110,7 +110,7 @@ button.icon i {
 .nav a,
 .nav span {
   float: left;
-  color: #f2f2f2;
+  color: inherit;
   text-align: center;
   margin-top: 12.5px;
   margin-bottom: 12.5px;
@@ -125,7 +125,7 @@ button.icon i {
 }
 .nav a:hover {
   background-color: #7925bd;
-  box-shadow: inset 0px 0px 3px 2px #641f9d;
+  box-shadow: inset 0px 0px 6px 2px #7223b3;
 }
 
 .right {
@@ -143,7 +143,7 @@ button.icon i {
 }
 .secondary-nav a {
   float: left;
-  color: #f2f2f2;
+  color: inherit;
   text-align: center;
   margin-top: 12.5px;
   margin-bottom: 12.5px;
@@ -158,7 +158,7 @@ button.icon i {
 }
 .secondary-nav a:hover {
   background-color: #892cd5;
-  box-shadow: inset 0px 0px 3px 2px #7524b7;
+  box-shadow: inset 0px 0px 6px 2px #8228cc;
 }
 
 .container {
