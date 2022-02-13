@@ -6,12 +6,51 @@ body {
   overflow-x: hidden;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+label,
+a {
+  font-weight: 400;
+}
+
 body {
   font-family: "Montserrat";
   color: white;
   background: #111827;
   margin: 0;
   font-size: x-large;
+}
+
+.wrapper {
+  min-height: 100%;
+  position: relative;
+}
+
+.content {
+  padding-bottom: 80px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.right {
+  float: right !important;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.emphasis-low {
+  color: #aab1bf;
 }
 
 footer {
@@ -33,24 +72,11 @@ footer a:hover {
   font-weight: 500;
 }
 
-.wrapper {
-  min-height: 100%;
-  position: relative;
-}
-
-.content {
-  padding-bottom: 80px;
-}
-
-* {
-  margin: 0;
-}
-
 button {
   margin: 5px;
   padding: 15px 32px;
   border: none;
-  font-family: "Montserrat";
+  font-family: inherit;
   cursor: pointer;
   font-size: 16px;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
@@ -128,10 +154,6 @@ button.icon i {
   box-shadow: inset 0px 0px 6px 2px #7223b3;
 }
 
-.right {
-  float: right !important;
-}
-
 .secondary-nav {
   background-color: #7b26c2;
   overflow: hidden;
@@ -161,11 +183,6 @@ button.icon i {
   box-shadow: inset 0px 0px 6px 2px #8228cc;
 }
 
-.container {
-  max-width: 1200px;
-  margin: auto;
-}
-
 .alert {
   padding: 16px;
   width: 100%;
@@ -186,6 +203,15 @@ button.icon i {
 }
 .alert.success {
   background: #16a34a;
+}
+
+.card {
+  background: #192339;
+  width: 100%;
+  padding: 16px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */

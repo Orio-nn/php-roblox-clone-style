@@ -1,5 +1,6 @@
 // colors
 $text: #f3f4f6;
+$text-secondary: darken($text, 25%);
 $dark-nav: #6b21a8;
 $primary: #2563eb;
 $danger: #dc2626;
@@ -8,6 +9,7 @@ $success: #16a34a;
 $secondary: #4b5563;
 // color modifiers
 $dark-bg: #111827;
+$dark-secondary: lighten($dark-bg, 5%);
 $dark-footer: lighten($dark-bg, 15%);
 $dark-secondary-nav: lighten($dark-nav, 6%);
 // other
@@ -36,12 +38,24 @@ $footer-height: 80px;
 	transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
 	border-radius: 5px;
 }
+// boilerplate
 html,
 body {
 	margin: 0;
 	padding: 0;
 	height: 100%;
 	overflow-x: hidden;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+label,
+a {
+	font-weight: 400;
 }
 body {
 	font-family: "Montserrat";
@@ -50,6 +64,34 @@ body {
 	margin: 0;
 	font-size: x-large;
 }
+// i fucking hate wrappers but i cant figure out how to keep
+// the fucking footer at the bottom of the page
+.wrapper {
+	min-height: 100%;
+	position: relative;
+}
+
+.content {
+	padding-bottom: $footer-height;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+.right {
+	float: right !important;
+}
+
+.container {
+	max-width: 1200px;
+	margin: auto;
+}
+.emphasis-low {
+	color: $text-secondary;
+}
+
+// elements
 footer {
 	position: absolute;
 	bottom: 0;
@@ -67,25 +109,11 @@ footer {
 		}
 	}
 }
-// i fucking hate wrappers but i cant figure out how to keep
-// the fucking footer at the bottom of the page
-.wrapper {
-	min-height: 100%;
-	position: relative;
-}
-
-.content {
-	padding-bottom: $footer-height;
-}
-
-* {
-	margin: 0;
-}
 button {
 	margin: 5px;
 	padding: 15px 32px;
 	border: none;
-	font-family: "Montserrat";
+	font-family: inherit;
 	cursor: pointer;
 	font-size: 16px;
 	transition: background-color 0.3s ease, box-shadow 0.3s ease;
@@ -153,10 +181,6 @@ button {
 		@include navbar-color($dark-nav);
 	}
 }
-.right {
-	float: right !important;
-}
-
 .secondary-nav {
 	background-color: $dark-secondary-nav;
 	overflow: hidden;
@@ -173,11 +197,6 @@ button {
 	a:hover {
 		@include navbar-color($dark-secondary-nav);
 	}
-}
-
-.container {
-	max-width: 1200px;
-	margin: auto;
 }
 
 .alert {
@@ -200,4 +219,13 @@ button {
 	&.success {
 		background: $success;
 	}
+}
+
+.card {
+	background: $dark-secondary;
+	width: 100%;
+	padding: 16px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	border-radius: 5px;
 }
