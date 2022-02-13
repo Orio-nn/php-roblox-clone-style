@@ -47,14 +47,13 @@ footer a:hover {
 }
 
 button {
-  margin-left: 5px;
-  margin-right: 5px;
+  margin: 5px;
   padding: 15px 32px;
   border: none;
   font-family: "Montserrat";
   cursor: pointer;
   font-size: 16px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
   font-size: x-large;
 }
 button.primary {
@@ -63,6 +62,7 @@ button.primary {
 }
 button.primary:hover {
   background-color: #1043b3;
+  box-shadow: inset 0px 0px 6px 2px #0f3b9e;
 }
 button.danger {
   background: #dc2626;
@@ -70,6 +70,7 @@ button.danger {
 }
 button.danger:hover {
   background-color: #9c1919;
+  box-shadow: inset 0px 0px 6px 2px #891616;
 }
 button.warning {
   background: #ea580c;
@@ -77,6 +78,7 @@ button.warning {
 }
 button.warning:hover {
   background-color: #a13d08;
+  box-shadow: inset 0px 0px 6px 2px #8b3407;
 }
 button.secondary {
   background: #4b5563;
@@ -84,15 +86,19 @@ button.secondary {
 }
 button.secondary:hover {
   background-color: #2a3037;
+  box-shadow: inset 0px 0px 6px 2px #20242a;
 }
 button.rounded {
   border-radius: 5px;
+}
+button.icon i {
+  margin-right: 2.5px;
+  font-size: x-large;
 }
 
 .nav {
   background-color: #6b21a8;
   overflow: hidden;
-  box-shadow: 12px 12px 8px 0px #888888;
 }
 .nav .brand {
   font-weight: bold;
@@ -113,11 +119,13 @@ button.rounded {
   padding: 14px;
   text-decoration: none;
   font-size: x-large;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  box-shadow: none;
+  transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
   border-radius: 5px;
 }
 .nav a:hover {
   background-color: #7925bd;
+  box-shadow: inset 0px 0px 3px 2px #641f9d;
 }
 
 .right {
@@ -141,14 +149,16 @@ button.rounded {
   margin-bottom: 12.5px;
   margin-left: 6.25px;
   margin-right: 6.25px;
-  padding: 10px;
+  padding: 14px;
   text-decoration: none;
   font-size: x-large;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  box-shadow: none;
+  transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
   border-radius: 5px;
 }
 .secondary-nav a:hover {
   background-color: #892cd5;
+  box-shadow: inset 0px 0px 3px 2px #7524b7;
 }
 
 .container {

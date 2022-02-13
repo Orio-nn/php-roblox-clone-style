@@ -10,8 +10,32 @@ $secondary: #4b5563;
 $dark-bg: #111827;
 $dark-footer: lighten($dark-bg, 15%);
 $dark-secondary-nav: lighten($dark-nav, 6%);
-
+// other
 $footer-height: 80px;
+// mixins
+@mixin btn-color($color) {
+	background-color: darken($color, 15%);
+	box-shadow: inset 0px 0px 6px 2px darken($color, $amount: 19.5%);
+}
+@mixin navbar-color($color) {
+	background-color: lighten($color, $amount: 5%);
+	box-shadow: inset 0px 0px 3px 2px darken($color, $amount: 2.5%);
+}
+@mixin navbar {
+	float: left;
+	color: #f2f2f2;
+	text-align: center;
+	margin-top: 12.5px;
+	margin-bottom: 12.5px;
+	margin-left: 6.25px;
+	margin-right: 6.25px;
+	padding: 14px;
+	text-decoration: none;
+	font-size: x-large;
+	box-shadow: none;
+	transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+	border-radius: 5px;
+}
 html,
 body {
 	margin: 0;
@@ -58,52 +82,56 @@ footer {
 	margin: 0;
 }
 button {
-	margin-left: 5px;
-	margin-right: 5px;
+	margin: 5px;
 	padding: 15px 32px;
 	border: none;
 	font-family: "Montserrat";
 	cursor: pointer;
 	font-size: 16px;
-	transition: background-color 0.3s ease;
+	transition: background-color 0.3s ease, box-shadow 0.3s ease;
 	font-size: x-large;
 	&.primary {
 		background: $primary;
 		color: white;
 		&:hover {
-			background-color: darken($primary, 15%);
+			@include btn-color($primary);
 		}
 	}
 	&.danger {
 		background: $danger;
 		color: white;
 		&:hover {
-			background-color: darken($danger, 15%);
+			@include btn-color($danger);
 		}
 	}
 	&.warning {
 		background: $warning;
 		color: white;
 		&:hover {
-			background-color: darken($warning, 15%);
+			@include btn-color($warning);
 		}
 	}
 	&.secondary {
 		background: $secondary;
 		color: white;
 		&:hover {
-			background-color: darken($secondary, 15%);
+			@include btn-color($secondary);
 		}
 	}
 	&.rounded {
 		border-radius: 5px;
+	}
+	&.icon {
+		i {
+			margin-right: 2.5px;
+			font-size: x-large;
+		}
 	}
 }
 
 .nav {
 	background-color: $dark-nav;
 	overflow: hidden;
-	box-shadow: 12px 12px 8px 0px #888888;
 
 	.brand {
 		font-weight: bold;
@@ -115,21 +143,10 @@ button {
 
 	a,
 	span {
-		float: left;
-		color: #f2f2f2;
-		text-align: center;
-		margin-top: 12.5px;
-		margin-bottom: 12.5px;
-		margin-left: 6.25px;
-		margin-right: 6.25px;
-		padding: 14px;
-		text-decoration: none;
-		font-size: x-large;
-		transition: background-color 0.2s ease, color 0.2s ease;
-		border-radius: 5px;
+		@include navbar();
 	}
 	a:hover {
-		background-color: lighten($color: $dark-nav, $amount: 5%);
+		@include navbar-color($dark-nav);
 	}
 }
 .right {
@@ -146,22 +163,11 @@ button {
 	}
 
 	a {
-		float: left;
-		color: #f2f2f2;
-		text-align: center;
-		margin-top: 12.5px;
-		margin-bottom: 12.5px;
-		margin-left: 6.25px;
-		margin-right: 6.25px;
-		padding: 10px;
-		text-decoration: none;
-		font-size: x-large;
-		transition: background-color 0.2s ease, color 0.2s ease;
-		border-radius: 5px;
+		@include navbar();
 	}
 
 	a:hover {
-		background-color: lighten($color: $dark-secondary-nav, $amount: 5%);
+		@include navbar-color($dark-secondary-nav);
 	}
 }
 
