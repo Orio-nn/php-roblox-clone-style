@@ -43,9 +43,18 @@
             <!-- Rest of Page -->
             <div class="card">
                 <h2>Signup</h2>
-                <form>
-                    <span class="emphasis-low" id="username">Username</span>
-                    <input type="text" name="username">
+                <form method="POST" action="action_page.php">
+                    <span class="emphasis-low" for="username">Username</span>
+                    <input type="text" name="username" id="username">
+                    <span class="emphasis-low" for="email">Email</span>
+                    <input type="email" name="email" id="email">
+                    <span class="emphasis-low" for="password">Password</span>
+                    <input type="password" name="password" id="password">
+                    <span class="emphasis-low" for="password-repeat">Repeat Password</span>
+                    <input type="password" name="password-repeat" id="password-repeat">
+                    <button class="primary full" type="submit" name="submit">
+                        Create Account
+                    </button>
                 </form>
             </div>
         </div>

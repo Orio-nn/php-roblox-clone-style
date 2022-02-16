@@ -20,7 +20,7 @@ a {
 
 body {
   font-family: "Montserrat";
-  color: white;
+  color: #f3f4f6;
   background: #111827;
   margin: 0;
   font-size: x-large;
@@ -73,7 +73,7 @@ footer a:hover {
 }
 
 button {
-  margin: 5px;
+  margin: 5px 0;
   padding: 15px 32px;
   border: none;
   font-family: inherit;
@@ -81,10 +81,11 @@ button {
   font-size: 16px;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
   font-size: x-large;
+  border-radius: 5px;
 }
 button.primary {
   background: #2563eb;
-  color: white;
+  color: inherit;
 }
 button.primary:hover, button.primary:focus {
   background-color: #1043b3;
@@ -92,7 +93,7 @@ button.primary:hover, button.primary:focus {
 }
 button.danger {
   background: #dc2626;
-  color: white;
+  color: inherit;
 }
 button.danger:hover, button.danger:focus {
   background-color: #9c1919;
@@ -108,18 +109,33 @@ button.warning:hover, button.warning:focus {
 }
 button.secondary {
   background: #4b5563;
-  color: white;
+  color: inherit;
 }
 button.secondary:hover, button.secondary:focus {
   background-color: #2a3037;
   box-shadow: inset 0px 0px 6px 2px #1a1d22;
 }
-button.rounded {
-  border-radius: 5px;
-}
 button.icon i {
   margin-right: 2.5px;
   font-size: x-large;
+}
+button.full {
+  width: 100%;
+}
+
+input[type=text],
+input[type=password],
+input[type=email] {
+  width: 100%;
+  padding: 10px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  font-size: inherit;
+  font-family: inherit;
+  border: none;
+  border-radius: 5px;
+  background: #111827;
+  color: inherit;
 }
 
 .nav {
@@ -138,10 +154,7 @@ button.icon i {
   float: left;
   color: inherit;
   text-align: center;
-  margin-top: 12.5px;
-  margin-bottom: 12.5px;
-  margin-left: 6.25px;
-  margin-right: 6.25px;
+  margin: 12.5px 6.25px;
   padding: 14px;
   text-decoration: none;
   font-size: x-large;
@@ -167,10 +180,7 @@ button.icon i {
   float: left;
   color: inherit;
   text-align: center;
-  margin-top: 12.5px;
-  margin-bottom: 12.5px;
-  margin-left: 6.25px;
-  margin-right: 6.25px;
+  margin: 12.5px 6.25px;
   padding: 14px;
   text-decoration: none;
   font-size: x-large;
