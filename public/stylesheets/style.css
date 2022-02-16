@@ -23,7 +23,7 @@ body {
   color: #f3f4f6;
   background: #111827;
   margin: 0;
-  font-size: x-large;
+  font-size: 24px;
 }
 
 .wrapper {
@@ -51,6 +51,14 @@ body {
 
 .emphasis-low {
   color: #aab1bf;
+}
+
+.emphasis-lower {
+  color: #7e899f;
+}
+
+.small {
+  font-size: 20px;
 }
 
 footer {
